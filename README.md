@@ -1,2 +1,2 @@
-# Cpp-Programs
-Compilation of C++ programs.
+# CLI Programs
+Compilation of CLI programs.
