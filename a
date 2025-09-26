@@ -13,11 +13,10 @@ const string lineBreak = string(120, '-');
 const string blankSpace = string(2, '\n');
 const string titleTabs = string(5, '\t');
 
-int Factorial(int n){
-//4. Process: f(n) * f(n-1) * f(n-2) * ... * 1
-    if (n <= 1)
-    return n;
-    return n * Factorial(n - 1);
+int Fibonacci(int n) {
+//4. Process: f(n - 1) + f(n - 2)
+	if (n == 0 || n == 1) return 1;
+	return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
 
 int main() {
@@ -26,14 +25,18 @@ int main() {
 	//1. Start
 	cout << lineBreak
 	     << endl << titleTabs << "== Welcome! =="
-	     << endl << titleTabs << "   Factorial"; //2. Welcome
+	     << endl << titleTabs << "Fibonacci Sequence"; //2. Welcome
 	     
     //3. Input Value.
-    cout << blankSpace << titleTabs << "Factorial of: ";
+    cout << blankSpace << titleTabs << "Sequence Length: ";
     cin >> x;
 
-    cout << "\nThe factorial of " << x << " is " << Factorial(x); //5. Output (Fact!)
-	
+	cout << endl << lineBreak << endl << titleTabs << "| ";
+	for (int i = 0; i < x; i++) {
+		cout << Fibonacci(i) << " "; //5. Output (Fib)
+	}
+    cout << " |\n" << titleTabs;
+    c
 	//6. End
 	cout << blankSpace << lineBreak
 	     << endl << titleTabs << "== Program End! ==" << blankSpace;
